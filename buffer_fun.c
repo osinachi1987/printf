@@ -18,6 +18,7 @@ char *create_buff(unsigned int bytes)
 	/*	new_buff[i] = 0; */
 	return (new_buff);
 }
+
 /**
  * copy_buff - copies a string into the buffer
  * @str: string to copy into buffer
