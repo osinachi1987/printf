@@ -25,6 +25,7 @@ char *create_buff(unsigned int bytes)
  *
  * Return: number of bytes written
  */
+ 
 unsigned int copy_buff(char *str, printh_t *help_s)
 {
 	unsigned int i = 0;
