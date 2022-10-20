@@ -1,16 +1,13 @@
 #include "main.h"
-#include <stdlib.h>
-
+#include <stdlib.h
 int print_helper(printh_t *help_s, va_list args);
 printh_t *init_help_s(const char *, va_list args);
-
 /**
   * _printf - Prints variatic arguments based on format string.
   * @format: String passed, may contain zero, or more directives.
   *
   * Return: Number of characters printed to stdout.
   */
-
 int _printf(const char *format, ...)
 {
 	int E;
@@ -25,7 +22,6 @@ int _printf(const char *format, ...)
 	if (!help_s)
 		return (-1);
 	E = 0;
-
 	while (format[help_s->f_i])
 	{
 		if (format[help_s->f_i] == '%' && !help_s->busy)
@@ -133,7 +129,6 @@ int print_helper(printh_t *help_s, va_list args)
 printh_t *init_help_s(const char *format, va_list args)
 {
 	printh_t *help_s;
-
 	help_s = malloc(sizeof(*help_s));
 	if (!help_s)
 	{
@@ -170,8 +165,6 @@ printh_t *init_help_s(const char *format, va_list args)
 	help_s->precision = help_s->spec_c = 0;
 	return (help_s);
 }
-
-
 /**
  * exit_busy_reset - Reset values of busy, width, precision, and dot to zero
  * upon exit of busy.
@@ -179,11 +172,9 @@ printh_t *init_help_s(const char *format, va_list args)
  * @reset_mods: Flag indicator to reset mods. 1 for reset, 0 do nothing.
  * Return: Void.
  */
-
 void exit_busy_reset(printh_t *help_s, int reset_mods)
 {
 	int i;
-
 	help_s->busy = 0;
 	help_s->width = 0;
 	help_s->precision = 0;
